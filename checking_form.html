@@ -22,7 +22,7 @@ function check()
     var answer3 = "North Charleston";
     var answer4 = "Mount Pleasant";
     var answer5 = "Rock Hill";
-    var
+    var correct = "correct";
 
 
 
@@ -34,6 +34,7 @@ function check()
 
     if (answer1 == guess1) {
         document.getElementById('one').style.backgroundColor = "#88FF88";
+        correct += 1;
 
     }
 
@@ -44,6 +45,7 @@ function check()
 
     if (answer2 == guess2) {
         document.getElementById('two').style.backgroundColor = "#88FF88";
+         correct += 1;
     }
     else
     {
@@ -52,6 +54,7 @@ function check()
 
     if (answer3 == guess3) {
         document.getElementById('three').style.backgroundColor = "#88FF88";
+         correct += 1;
     }
     else
     {
@@ -60,6 +63,7 @@ function check()
 
     if (answer4 == guess4) {
         document.getElementById('four').style.backgroundColor = "#88FF88";
+         correct += 1;
     }
     else
     {
@@ -68,11 +72,17 @@ function check()
 
     if (answer5 == guess5) {
         document.getElementById('five').style.backgroundColor = "#88FF88";
+         correct += 1;
     }
     else
     {
       document.getElementById('five').style.backgroundColor = "#FF0000";
 }
+    
+   if (correct == 5) {
+       document.getElementById('score').innerHTML = "You got" + correct + " out of 5 correct!";
+   }
+   
   
   
 
@@ -104,6 +114,7 @@ function check()
 <input type="button" onclick="check()" value="Check it!">
 
 </form>
+    <div id="score"></div>
 
 </body>
 </html>
